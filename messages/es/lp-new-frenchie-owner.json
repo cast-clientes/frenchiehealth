@@ -1,0 +1,51 @@
+{
+  "slug": "new-frenchie-owner",
+  "analyticsName": "lp_new_frenchie_owner",
+  "meta": {
+    "title": "Nuevo dueño de French Bulldog: guía de supervivencia",
+    "description": "La guía rápida para nuevos dueños de Frenchies: pliegues, calor, alergias, oídos, respiración, vet y tracking desde el día uno.",
+    "keywords": "nuevo dueño french bulldog, cachorro bulldog francés cuidados, adoptar frenchie"
+  },
+  "nav": { "logo": "Frenchie Care", "how": "Checklist", "pricing": "Founding Member", "signin": "Entrar", "cta": "Empezar gratis" },
+  "hero": {
+    "headline": "Tener un Frenchie es diferente a tener cualquier otro perro. Nadie te lo dijo, ¿verdad?",
+    "intro": "La primera semana con un Frenchie es caótica. Googlear solo te da información contradictoria. Y tu veterinario tiene 15 minutos para verte."
+  },
+  "survival": {
+    "title": "Las 7 cosas que nadie te dijo sobre los Frenchies",
+    "items": [
+      "Sus pliegues necesitan limpieza diaria. Sin esto, se infectan.",
+      "No pueden regular su temperatura. El calor los puede matar.",
+      "Son propensos a alergias. Lo que comen importa más que en otras razas.",
+      "Sus oídos se infectan mucho si no los revisas semanalmente.",
+      "Pueden desarrollar hernias de disco. El ejercicio intenso antes del año hace daño.",
+      "Resoplar y roncar es común, pero hay sonidos que sí son emergencia.",
+      "Necesitan más visitas al vet que la mayoría de razas. Organízate desde el día 1."
+    ]
+  },
+  "mistake": {
+    "title": "El error más común del dueño nuevo",
+    "headline": "No llevar registro desde el principio.",
+    "body": "Cuando tu Frenchie tenga 3 o 5 años y aparezca un síntoma raro, el historial desde cachorro va a valer oro: qué comía, cómo respiraba, cuándo empezó a rascarse, qué vacunas tuvo y qué dijo cada vet."
+  },
+  "solution": {
+    "eyebrow": "Copiloto para nuevos dueños",
+    "title": "Frenchie Care te guía sin abrumarte.",
+    "body": "Tip diario, plan de alimentación, preguntas de madrugada con IA, registros rápidos y una comunidad de otros papás y mamás de Frenchie que ya pasaron por lo mismo.",
+    "bullets": ["Checklist de cuidado diario", "Plan de alimentación por etapa", "Chat de IA para dudas de 3am", "Historial desde cachorro"]
+  },
+  "community": {
+    "title": "No estás solo.",
+    "body": "Hay familias Frenchie compartiendo hitos, preguntas y pequeñas victorias todos los días.",
+    "posts": ["Primer baño sin drama", "¿Alguien más limpia pliegues dos veces al día?", "Hoy aprendimos a evitar el paseo con calor"]
+  },
+  "cta": { "title": "Empezá el historial de {dogName} desde hoy.", "body": "Cuando tenga 5 años, te lo vas a agradecer.", "button": "Crear historial gratis", "secondary": "Ver oferta fundador" },
+  "footer": { "tagline": "Un inicio más claro para una raza que necesita cuidados distintos.", "disclaimer": "Frenchie Care educa y registra. No reemplaza atención veterinaria.", "terms": "Términos", "privacy": "Privacidad" },
+  "images": {
+    "hero": "https://pikaso.cdnpk.net/private/production/4749332710/render.png?token=exp=1783036800~hmac=2c8eb33b088c459e953a6218318cc4a9972c28763ed754caa9a8694bdc30ecbd",
+    "chaos": "https://pikaso.cdnpk.net/private/production/4749332925/render.png?token=exp=1783036800~hmac=0f96da41afae151cd6708071aa09757f5775ca7225277773936fa302bf6ba55d",
+    "checklist": "https://pikaso.cdnpk.net/private/production/4749332903/render.png?token=exp=1783036800~hmac=b4aa514aa1b9d691f9920bb899a4ccb77f48bedfe3f98f701cdb651fc86bc8bb",
+    "community": "https://pikaso.cdnpk.net/private/production/4749333138/render.png?token=exp=1783036800~hmac=c333bee4eb1387363df0b0f838600830abe62e2f1135d732db59094820734010",
+    "onboarding": "https://pikaso.cdnpk.net/private/production/4749344637/render.png?token=exp=1783036800~hmac=468090835a96191a4625369887c6210c0670d42be4d0421c3eaa19a3c634529e"
+  }
+}

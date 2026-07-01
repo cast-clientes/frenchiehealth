@@ -1,0 +1,44 @@
+{
+  "slug": "breathing-heat",
+  "analyticsName": "lp_breathing_heat",
+  "meta": {
+    "title": "Problemas respiratorios y calor en French Bulldogs",
+    "description": "Aprende a manejar respiración, calor y señales de alerta en Frenchies con tracking de episodios, temperatura y actividad.",
+    "keywords": "frenchie respira mal, BOAS bulldog francés, golpe de calor french bulldog"
+  },
+  "nav": { "logo": "Frenchie Care", "how": "Señales", "pricing": "Founding Member", "signin": "Entrar", "cta": "Empezar gratis" },
+  "hero": {
+    "headline": "Los Frenchies no “respiran raro”: tienen una condición que se puede manejar",
+    "subhead": "Tu Frenchie no está enfermo. Está construido diferente.",
+    "body": "Ese ronquido, ese resoplido y ese jadeo pueden asustar. En Frenchies, la cara chata cambia cómo entra el aire y cómo regulan el calor. La clave no es vivir con miedo: es saber qué observar, cuándo bajar el ritmo y cuándo llamar al veterinario."
+  },
+  "myths": {
+    "title": "Mitos que conviene desmontar",
+    "items": [
+      { "question": "Mi Frenchie ronca fuerte, eso es normal", "answer": "Es común, pero si cambia de intensidad, aparece despierto o se acompaña de esfuerzo, conviene registrarlo y consultarlo." },
+      { "question": "Si jadea, es que hizo ejercicio", "answer": "Puede ser calor, estrés o esfuerzo respiratorio. La temperatura del ambiente importa tanto como la actividad." },
+      { "question": "Los Frenchies no pueden hacer deporte", "answer": "Pueden moverse, pero necesitan sesiones cortas, clima controlado y pausas frecuentes." },
+      { "question": "Si respira bien en el vet, está bien", "answer": "Muchos episodios ocurren en casa, con calor o después de jugar. El historial ayuda a mostrar lo que el vet no vio." },
+      { "question": "No hay nada que hacer con el BOAS", "answer": "Hay muchísimo que manejar: peso, clima, actividad, alertas y decisiones veterinarias informadas." }
+    ]
+  },
+  "emergency": {
+    "title": "Estas señales requieren veterinario de inmediato",
+    "items": ["Encías azules, grises o muy pálidas", "Colapso o debilidad repentina", "Respiración con esfuerzo que no mejora en reposo", "Jadeo extremo con calor", "Vómitos, desorientación o temperatura alta"]
+  },
+  "solution": {
+    "eyebrow": "Tracker respiratorio",
+    "title": "Entiende cuándo pasa, no solo que pasó.",
+    "body": "Frenchie Care registra episodios, temperatura, humedad, duración, actividad previa y recuperación. Con el tiempo ves el mapa: qué días son seguros, qué rutinas disparan jadeo y qué señales merecen consulta.",
+    "bullets": ["Registro de episodios respiratorios", "Alertas por temperatura ambiental", "Correlación con paseo, juego y descanso", "Resumen claro para tu veterinario"]
+  },
+  "cta": { "title": "Empezá a entender los patrones de respiración de {dogName}.", "body": "Antes del próximo episodio, construí un historial útil.", "button": "Empezar ahora", "secondary": "Ver Founding Member" },
+  "footer": { "tagline": "Calma, datos y decisiones responsables para Frenchies.", "disclaimer": "Frenchie Care no reemplaza atención veterinaria. Ante señales de emergencia, busca ayuda inmediata.", "terms": "Términos", "privacy": "Privacidad" },
+  "images": {
+    "hero": "https://pikaso.cdnpk.net/private/production/4749329906/render.png?token=exp=1783036800~hmac=f76257900f37e62c904b2b264aca33c86194f619e553479ece1b3d22fa4ff919",
+    "context": "https://pikaso.cdnpk.net/private/production/4749336797/render.png?token=exp=1783036800~hmac=7c03c5ec44379de4435f0faf1f677002436ab6eda445c5089a2e1952cac50831",
+    "warning": "https://pikaso.cdnpk.net/private/production/4749330015/render.png?token=exp=1783036800~hmac=26c7aaef906cb111218579446e2f44fa8337df6fc251bc51734f90649443debe",
+    "solution": "https://pikaso.cdnpk.net/private/production/4749337223/render.png?token=exp=1783036800~hmac=3bf5bfa45132399a59c12ffa34d2cb914ba15eb5129a5b077fc33e79fcb36f10",
+    "result": "https://pikaso.cdnpk.net/private/production/4749330492/render.png?token=exp=1783036800~hmac=b58d1cac0e93f251702f42f7e2560baf26e63ff21b4c8870ab3a6dc15786067a"
+  }
+}

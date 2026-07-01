@@ -1,0 +1,54 @@
+{
+  "slug": "feeding-guide",
+  "analyticsName": "lp_feeding_guide",
+  "meta": {
+    "title": "Food guide for French Bulldogs with sensitive skin",
+    "description": "A practical guide to detect whether food is contributing to your Frenchie's skin, ear, or digestion problems.",
+    "keywords": "french bulldog food, frenchie food allergies, french bulldog elimination diet"
+  },
+  "nav": { "logo": "Frenchie Care", "how": "Guide", "pricing": "Founding Member", "signin": "Sign in", "cta": "Start free" },
+  "hero": {
+    "headline": "The food you feed today may be causing your Frenchie's skin problems",
+    "subhead": "Stop switching expensive bags blindly. Start with a simple, trackable plan built for Frenchies."
+  },
+  "quiz": {
+    "title": "Three quick questions",
+    "questions": [
+      { "label": "What protein does your Frenchie mainly eat?", "options": ["Chicken", "Beef", "Fish", "Mix", "Not sure"] },
+      { "label": "Do they have skin, ear, or digestion problems?", "options": ["Yes, often", "Sometimes", "No", "Not sure"] },
+      { "label": "Have you changed food to see if symptoms improved?", "options": ["Yes, it worked", "Yes, no change", "No"] }
+    ],
+    "result": "Based on your answers, there is a 73% chance your Frenchie's food is contributing to their symptoms.",
+    "note": "This is directional, not a diagnosis. Your veterinarian always has the final word."
+  },
+  "problem": {
+    "title": "The problem with generic advice",
+    "leftTitle": "What food brands say",
+    "rightTitle": "What matters for Frenchies",
+    "left": ["More protein is always better", "If it is premium, it should work", "Switch to grain-free and you are done"],
+    "right": ["The specific protein is often the trigger", "Expensive does not mean compatible", "Without tracking, every change is a guess"]
+  },
+  "proteins": {
+    "title": "Proteins: visual guide",
+    "recommended": ["Fish", "Turkey", "Lamb", "Duck"],
+    "risky": ["Chicken", "Beef", "Dairy", "Unknown mix"]
+  },
+  "plan": {
+    "title": "The 4-step elimination plan",
+    "steps": ["Choose one simple new protein", "Keep 3 weeks without hidden extras", "Track skin, ears, digestion, and energy", "Reintroduce one item at a time and compare"],
+    "cta": "Frenchie Care runs this process for you automatically."
+  },
+  "proof": {
+    "title": "Owners who stopped guessing",
+    "testimonials": ["I changed five foods before tracking. The pattern showed up when I stopped mixing treats.", "My vet could see dates, photos, and food. The visit felt completely different."]
+  },
+  "cta": { "title": "Start {dogName}'s food plan with data.", "body": "Founding Member: 7 free days for the first 100 founders.", "button": "Start free", "secondary": "See offer" },
+  "footer": { "tagline": "Food, symptoms, and decisions in one timeline.", "disclaimer": "Frenchie Care does not diagnose allergies. It helps you track data for better veterinary conversations.", "terms": "Terms", "privacy": "Privacy" },
+  "images": {
+    "hero": "https://pikaso.cdnpk.net/private/production/4749325730/render.png?token=exp=1783036800~hmac=23bd6dfe2262608bc4c13b5f6cf71d9056a54f23d982d150a74e727cd58c79af",
+    "problem": "https://pikaso.cdnpk.net/private/production/4749325827/render.png?token=exp=1783036800~hmac=b02877f08f1ccb7ae5a897ffa4d94dd62a07f7567f7f72b1a5848bcf7b3ce28b",
+    "solution": "https://pikaso.cdnpk.net/private/production/4749326002/render.png?token=exp=1783036800~hmac=9b2a7f2371aea5811dba7f7f4a7f403bf6da0d2c793913875838411c8e341310",
+    "plan": "https://pikaso.cdnpk.net/private/production/4749334766/render.png?token=exp=1783036800~hmac=d15a460c03030ec63b753a1bc658cfd16c99349dab08af0f17e7481232eda2ca",
+    "result": "https://pikaso.cdnpk.net/private/production/4749326811/render.png?token=exp=1783036800~hmac=649f12fc67e6d5f3a33e0ad8969881788b7eed64610808d01e49b7b0a87b48fa"
+  }
+}

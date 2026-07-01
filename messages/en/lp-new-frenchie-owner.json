@@ -1,0 +1,51 @@
+{
+  "slug": "new-frenchie-owner",
+  "analyticsName": "lp_new_frenchie_owner",
+  "meta": {
+    "title": "New French Bulldog owner survival guide",
+    "description": "The quick guide for new Frenchie owners: folds, heat, allergies, ears, breathing, vet visits, and tracking from day one.",
+    "keywords": "new french bulldog owner, french bulldog puppy care, adopt frenchie"
+  },
+  "nav": { "logo": "Frenchie Care", "how": "Checklist", "pricing": "Founding Member", "signin": "Sign in", "cta": "Start free" },
+  "hero": {
+    "headline": "Owning a Frenchie is different from owning any other dog. Nobody told you, right?",
+    "intro": "The first week with a Frenchie is chaotic. Googling gives you conflicting advice. And your veterinarian has 15 minutes with you."
+  },
+  "survival": {
+    "title": "The 7 things nobody told you about Frenchies",
+    "items": [
+      "Their folds need daily cleaning. Without it, they can get infected.",
+      "They cannot regulate temperature well. Heat can be dangerous.",
+      "They are prone to allergies. Food matters more than with many breeds.",
+      "Their ears get infected often if you do not check them weekly.",
+      "They can develop disc issues. Intense exercise before age one can hurt.",
+      "Snorting and snoring are common, but some sounds are emergencies.",
+      "They need more vet visits than most breeds. Get organized from day one."
+    ]
+  },
+  "mistake": {
+    "title": "The most common new-owner mistake",
+    "headline": "Not tracking from the beginning.",
+    "body": "When your Frenchie is 3 or 5 and a strange symptom appears, puppy history is gold: what they ate, how they breathed, when itching started, which vaccines they had, and what every vet said."
+  },
+  "solution": {
+    "eyebrow": "Copilot for new owners",
+    "title": "Frenchie Care guides you without overwhelming you.",
+    "body": "Daily tip, feeding plan, 3am AI questions, quick logs, and a community of Frenchie parents who have already been through it.",
+    "bullets": ["Daily care checklist", "Stage-based feeding plan", "AI chat for late-night questions", "History from puppyhood"]
+  },
+  "community": {
+    "title": "You are not alone.",
+    "body": "Frenchie families share milestones, questions, and small wins every day.",
+    "posts": ["First bath with no drama", "Does anyone else clean folds twice a day?", "Today we learned to skip heat walks"]
+  },
+  "cta": { "title": "Start {dogName}'s history today.", "body": "When they are 5, you will be glad you did.", "button": "Create free history", "secondary": "See founder offer" },
+  "footer": { "tagline": "A clearer start for a breed that needs different care.", "disclaimer": "Frenchie Care educates and tracks. It does not replace veterinary attention.", "terms": "Terms", "privacy": "Privacy" },
+  "images": {
+    "hero": "https://pikaso.cdnpk.net/private/production/4749332710/render.png?token=exp=1783036800~hmac=2c8eb33b088c459e953a6218318cc4a9972c28763ed754caa9a8694bdc30ecbd",
+    "chaos": "https://pikaso.cdnpk.net/private/production/4749332925/render.png?token=exp=1783036800~hmac=0f96da41afae151cd6708071aa09757f5775ca7225277773936fa302bf6ba55d",
+    "checklist": "https://pikaso.cdnpk.net/private/production/4749332903/render.png?token=exp=1783036800~hmac=b4aa514aa1b9d691f9920bb899a4ccb77f48bedfe3f98f701cdb651fc86bc8bb",
+    "community": "https://pikaso.cdnpk.net/private/production/4749333138/render.png?token=exp=1783036800~hmac=c333bee4eb1387363df0b0f838600830abe62e2f1135d732db59094820734010",
+    "onboarding": "https://pikaso.cdnpk.net/private/production/4749344637/render.png?token=exp=1783036800~hmac=468090835a96191a4625369887c6210c0670d42be4d0421c3eaa19a3c634529e"
+  }
+}

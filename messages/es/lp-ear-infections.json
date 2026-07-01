@@ -1,0 +1,68 @@
+{
+  "slug": "ear-infections",
+  "analyticsName": "lp_ear_infections",
+  "meta": {
+    "title": "Infecciones de oído recurrentes en French Bulldogs",
+    "description": "Descubre patrones detrás de las infecciones de oído de tu Frenchie con registros de episodios, dieta, humedad y cuidados semanales.",
+    "keywords": "infecciones de oído french bulldog, oído frenchie, alergias bulldog francés"
+  },
+  "nav": {
+    "logo": "Frenchie Care",
+    "how": "Cómo ayuda",
+    "pricing": "Founding Member",
+    "signin": "Entrar",
+    "cta": "Empezar gratis"
+  },
+  "hero": {
+    "headline": "¿Por qué las infecciones de oído de {dogName} siguen volviendo?",
+    "story": [
+      "La primera vez que tu Frenchie se sacudió la cabeza así, pensaste que era algo menor. Fuiste al vet, te recetaron gotas. Mejoró. Tres semanas después, volvió.",
+      "Después empiezan las dudas: si fue el baño, la comida nueva, el parque, la humedad, las alergias de temporada o simplemente mala suerte. Cambiás las gotas, limpiás más seguido y aun así vuelve ese olor ácido, esa oreja roja, esa incomodidad.",
+      "Lo frustrante no es cuidar el oído. Lo frustrante es sentir que estás tratando el mismo incendio una y otra vez sin saber qué lo prende."
+    ]
+  },
+  "problem": {
+    "title": "El problema no son las infecciones.",
+    "subtitle": "El problema es que nadie lleva registro de los patrones.",
+    "body": "En Frenchies, los episodios de oído casi siempre tienen un detonante: una proteína que no tolera, humedad después del baño, polen, calor o una rutina de limpieza inconsistente. El patrón aparece cuando mirás semanas de datos ordenados, no cuando intentás recordar todo en la sala del vet."
+  },
+  "stats": [
+    { "value": "1 de cada 4", "label": "Frenchies tiene infecciones de oído recurrentes" },
+    { "value": "6+ meses", "label": "puede tardar descubrir el detonante más común: la comida" },
+    { "value": "3 semanas", "label": "promedio para identificar patrones cuando hay tracking constante" }
+  ],
+  "solution": {
+    "eyebrow": "Frenchie Care para oídos",
+    "title": "El módulo de oídos convierte episodios sueltos en una línea de tiempo clara.",
+    "body": "Registrás limpieza semanal, olor, enrojecimiento, secreción, sacudidas de cabeza y cambios de dieta. Frenchie Care cruza esos datos para mostrar qué pasó antes de cada episodio.",
+    "bullets": [
+      "Checklist semanal de revisión y limpieza",
+      "Registro de episodios con fotos, notas y severidad",
+      "Correlación con comida, ambiente, baños y clima",
+      "Resumen listo para compartir con tu veterinario"
+    ]
+  },
+  "testimonial": {
+    "quote": "Bruno tenía infección cada mes. Cuando empecé a registrar comida y limpiezas, vimos que los brotes aparecían después del pollo. Se lo mostré al vet y por fin tuvimos una conversación concreta.",
+    "name": "Placeholder: mamá de Bruno",
+    "detail": "Testimonio para reemplazar por cliente real"
+  },
+  "cta": {
+    "title": "Empezá a registrar los oídos de {dogName} hoy.",
+    "body": "Los primeros 100 fundadores prueban Frenchie Care gratis por 7 días y bloquean el precio Founding Member.",
+    "button": "Empezar como Founding Member",
+    "secondary": "Ver precio fundador"
+  },
+  "footer": {
+    "tagline": "Hecho para dueños de Frenchies que quieren llegar al vet con datos, no con memoria.",
+    "disclaimer": "Frenchie Care es una herramienta educativa de seguimiento. No diagnostica ni reemplaza a un veterinario licenciado.",
+    "terms": "Términos",
+    "privacy": "Privacidad"
+  },
+  "images": {
+    "hero": "https://pikaso.cdnpk.net/private/production/4749323050/render.png?token=exp=1783036800~hmac=c0a73dbee0c08b80f42b5909d2da23b3a0ca16999924d5b5527a58f30f76ee5f",
+    "problem": "https://pikaso.cdnpk.net/private/production/4749323068/render.png?token=exp=1783036800~hmac=2395f16d554e2800088dd8d7f54ab11323d65f6eba95944884ec30038499b152",
+    "solution": "https://pikaso.cdnpk.net/private/production/4749329634/render.png?token=exp=1783036800~hmac=9d318a1b12ff990ef12aa9b32e623071fc0b940ffd3fde6f2fce5582d0d49b28",
+    "result": "https://pikaso.cdnpk.net/private/production/4749323394/render.png?token=exp=1783036800~hmac=e4475cb523100269fd536118ed26ad96b4d624d8a3c02cdc1de125f41bf81992"
+  }
+}

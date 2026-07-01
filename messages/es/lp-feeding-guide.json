@@ -1,0 +1,62 @@
+{
+  "slug": "feeding-guide",
+  "analyticsName": "lp_feeding_guide",
+  "meta": {
+    "title": "Guía de comida para French Bulldogs con piel sensible",
+    "description": "Una guía práctica para detectar si la comida está detrás de los problemas de piel, oídos o digestión de tu Frenchie.",
+    "keywords": "comida french bulldog, alergias comida frenchie, dieta eliminación bulldog francés"
+  },
+  "nav": { "logo": "Frenchie Care", "how": "Guía", "pricing": "Founding Member", "signin": "Entrar", "cta": "Empezar gratis" },
+  "hero": {
+    "headline": "La comida que le das hoy puede estar causando los problemas de piel de tu Frenchie",
+    "subhead": "Deja de cambiar bolsas caras a ciegas. Empieza con un plan simple, registrable y específico para Frenchies."
+  },
+  "quiz": {
+    "title": "Tres preguntas rápidas",
+    "questions": [
+      { "label": "¿Qué proteína come tu Frenchie principalmente?", "options": ["Pollo", "Res", "Pescado", "Mix", "No sé"] },
+      { "label": "¿Tiene problemas de piel, oídos o digestión?", "options": ["Sí, frecuentes", "A veces", "No", "No estoy seguro"] },
+      { "label": "¿Alguna vez probaste cambiarle la comida para ver si mejoraba?", "options": ["Sí, funcionó", "Sí, no cambió nada", "No"] }
+    ],
+    "result": "Basado en tus respuestas, hay un 73% de probabilidad de que la comida de tu Frenchie esté contribuyendo a sus síntomas.",
+    "note": "Es orientativo, no diagnóstico. Tu veterinario siempre tiene la última palabra."
+  },
+  "problem": {
+    "title": "El problema con la información genérica",
+    "leftTitle": "Lo que dicen las marcas de comida",
+    "rightTitle": "Lo que importa en Frenchies",
+    "left": ["Más proteína siempre es mejor", "Si es premium, debería funcionar", "Cambia a grain-free y listo"],
+    "right": ["La proteína específica suele ser el detonante", "Caro no significa compatible", "Sin registro, cualquier cambio se vuelve una apuesta"]
+  },
+  "proteins": {
+    "title": "Proteínas: guía visual",
+    "recommended": ["Pescado", "Pavo", "Cordero", "Pato"],
+    "risky": ["Pollo", "Res", "Lácteos", "Mix desconocido"]
+  },
+  "plan": {
+    "title": "El plan de eliminación en 4 pasos",
+    "steps": [
+      "Elige una proteína nueva y simple",
+      "Mantén 3 semanas sin extras escondidos",
+      "Registra piel, oídos, digestión y energía",
+      "Reintroduce una cosa a la vez y compara"
+    ],
+    "cta": "El tracker de Frenchie Care lleva este proceso por vos automáticamente."
+  },
+  "proof": {
+    "title": "Dueños que dejaron de adivinar",
+    "testimonials": [
+      "Cambié cinco comidas antes de registrar. El patrón apareció cuando dejé de mezclar snacks.",
+      "Mi vet pudo ver fechas, fotos y comida. La consulta fue otra cosa."
+    ]
+  },
+  "cta": { "title": "Empieza el plan de alimentación de {dogName} con datos.", "body": "Founding Member: 7 días gratis para los primeros 100 fundadores.", "button": "Empezar gratis", "secondary": "Ver oferta" },
+  "footer": { "tagline": "Comida, síntomas y decisiones en un solo historial.", "disclaimer": "Frenchie Care no diagnostica alergias. Te ayuda a registrar datos para hablar mejor con tu veterinario.", "terms": "Términos", "privacy": "Privacidad" },
+  "images": {
+    "hero": "https://pikaso.cdnpk.net/private/production/4749325730/render.png?token=exp=1783036800~hmac=23bd6dfe2262608bc4c13b5f6cf71d9056a54f23d982d150a74e727cd58c79af",
+    "problem": "https://pikaso.cdnpk.net/private/production/4749325827/render.png?token=exp=1783036800~hmac=b02877f08f1ccb7ae5a897ffa4d94dd62a07f7567f7f72b1a5848bcf7b3ce28b",
+    "solution": "https://pikaso.cdnpk.net/private/production/4749326002/render.png?token=exp=1783036800~hmac=9b2a7f2371aea5811dba7f7f4a7f403bf6da0d2c793913875838411c8e341310",
+    "plan": "https://pikaso.cdnpk.net/private/production/4749334766/render.png?token=exp=1783036800~hmac=d15a460c03030ec63b753a1bc658cfd16c99349dab08af0f17e7481232eda2ca",
+    "result": "https://pikaso.cdnpk.net/private/production/4749326811/render.png?token=exp=1783036800~hmac=649f12fc67e6d5f3a33e0ad8969881788b7eed64610808d01e49b7b0a87b48fa"
+  }
+}

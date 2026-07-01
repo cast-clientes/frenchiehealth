@@ -1,0 +1,32 @@
+{
+  "name": "Frenchie Skin Tracker",
+  "short_name": "Frenchie",
+  "description": "Track your French Bulldog's skin health with daily tips, AI guidance, and vet-ready reports.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fdf6ef",
+  "theme_color": "#e8734a",
+  "orientation": "portrait",
+  "lang": "en",
+  "categories": ["health", "lifestyle"],
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-maskable.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "label": "Dashboard",
+      "form_factor": "narrow"
+    }
+  ]
+}

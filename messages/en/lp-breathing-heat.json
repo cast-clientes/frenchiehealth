@@ -1,0 +1,44 @@
+{
+  "slug": "breathing-heat",
+  "analyticsName": "lp_breathing_heat",
+  "meta": {
+    "title": "French Bulldog breathing and heat problems",
+    "description": "Learn to manage Frenchie breathing, heat, and warning signs with episode, temperature, and activity tracking.",
+    "keywords": "frenchie breathing problems, french bulldog BOAS, french bulldog heat stroke"
+  },
+  "nav": { "logo": "Frenchie Care", "how": "Signals", "pricing": "Founding Member", "signin": "Sign in", "cta": "Start free" },
+  "hero": {
+    "headline": "Frenchies do not just “breathe weird”: they have a condition you can manage",
+    "subhead": "Your Frenchie is not broken. They are built differently.",
+    "body": "The snoring, snorting, and panting can be scary. In Frenchies, the flat face changes airflow and heat regulation. The goal is not to live afraid. It is to know what to watch, when to slow down, and when to call the vet."
+  },
+  "myths": {
+    "title": "Myths worth unpacking",
+    "items": [
+      { "question": "My Frenchie snores loudly, so it is normal", "answer": "It is common, but changes in intensity, awake snoring, or visible effort should be tracked and discussed." },
+      { "question": "If they pant, they just exercised", "answer": "It can be heat, stress, or breathing effort. Room temperature matters as much as activity." },
+      { "question": "Frenchies cannot exercise", "answer": "They can move, but need short sessions, controlled weather, and frequent breaks." },
+      { "question": "If they breathe well at the vet, they are fine", "answer": "Many episodes happen at home, in heat, or after play. History shows what the vet did not see." },
+      { "question": "There is nothing to do about BOAS", "answer": "There is a lot to manage: weight, weather, activity, alerts, and informed veterinary decisions." }
+    ]
+  },
+  "emergency": {
+    "title": "These signs need a vet immediately",
+    "items": ["Blue, gray, or very pale gums", "Collapse or sudden weakness", "Labored breathing that does not improve at rest", "Extreme panting in heat", "Vomiting, disorientation, or high temperature"]
+  },
+  "solution": {
+    "eyebrow": "Respiratory tracker",
+    "title": "Understand when it happens, not only that it happened.",
+    "body": "Frenchie Care tracks episodes, temperature, humidity, duration, prior activity, and recovery. Over time you see the map: safer days, routines that trigger panting, and signs worth discussing.",
+    "bullets": ["Breathing episode logs", "Weather and heat alerts", "Correlation with walks, play, and rest", "Clear summary for your veterinarian"]
+  },
+  "cta": { "title": "Start understanding {dogName}'s breathing patterns.", "body": "Build a useful history before the next episode.", "button": "Start now", "secondary": "See Founding Member" },
+  "footer": { "tagline": "Calm, data, and responsible decisions for Frenchies.", "disclaimer": "Frenchie Care does not replace veterinary attention. For emergency signs, seek immediate help.", "terms": "Terms", "privacy": "Privacy" },
+  "images": {
+    "hero": "https://pikaso.cdnpk.net/private/production/4749329906/render.png?token=exp=1783036800~hmac=f76257900f37e62c904b2b264aca33c86194f619e553479ece1b3d22fa4ff919",
+    "context": "https://pikaso.cdnpk.net/private/production/4749336797/render.png?token=exp=1783036800~hmac=7c03c5ec44379de4435f0faf1f677002436ab6eda445c5089a2e1952cac50831",
+    "warning": "https://pikaso.cdnpk.net/private/production/4749330015/render.png?token=exp=1783036800~hmac=26c7aaef906cb111218579446e2f44fa8337df6fc251bc51734f90649443debe",
+    "solution": "https://pikaso.cdnpk.net/private/production/4749337223/render.png?token=exp=1783036800~hmac=3bf5bfa45132399a59c12ffa34d2cb914ba15eb5129a5b077fc33e79fcb36f10",
+    "result": "https://pikaso.cdnpk.net/private/production/4749330492/render.png?token=exp=1783036800~hmac=b58d1cac0e93f251702f42f7e2560baf26e63ff21b4c8870ab3a6dc15786067a"
+  }
+}

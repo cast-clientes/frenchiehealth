@@ -1,0 +1,51 @@
+{
+  "slug": "vet-visits",
+  "analyticsName": "lp_vet_visits",
+  "meta": {
+    "title": "Historial veterinario para French Bulldogs",
+    "description": "Convierte síntomas, fotos, fechas y tratamientos de tu Frenchie en un reporte claro para cada visita al veterinario.",
+    "keywords": "historial veterinario french bulldog, reporte salud frenchie, tracker veterinario perro"
+  },
+  "nav": { "logo": "Frenchie Care", "how": "Reporte", "pricing": "Founding Member", "signin": "Entrar", "cta": "Empezar gratis" },
+  "hero": {
+    "headline": "¿Cuánto tiempo perdés explicándole al vet lo mismo en cada visita?",
+    "beforeTitle": "Sin Frenchie Care",
+    "afterTitle": "Con Frenchie Care",
+    "before": "¿Cuándo fue la última vez que tuvo ese sarpullido? Ehh... hace como... tres meses? O cuatro. Y el vet anterior le recetó... algo. No recuerdo el nombre.",
+    "after": "Aquí está el historial completo. Desde el 3 de marzo. 47 entradas, con fotos. El pico más alto fue el 15 de abril, tres días después de cambiar la comida."
+  },
+  "problem": {
+    "title": "Por qué los vets odian la falta de historia",
+    "quote": "La mayoría de los errores de orientación clínica empiezan con historia incompleta. No es culpa del dueño: nadie recuerda todo de memoria.",
+    "attribution": "Cita representativa de veterinario"
+  },
+  "passport": {
+    "eyebrow": "Pasaporte de salud",
+    "title": "Un reporte PDF que habla el idioma del vet.",
+    "body": "Frenchie Care reúne línea de tiempo, fotos, fechas, comida, síntomas, tratamientos, vacunas y notas. Lo compartís por link o impreso antes de sentarte en consulta.",
+    "bullets": ["Timeline de síntomas con fotos", "Cambios de comida y medicación", "Picos de severidad por fecha", "Notas listas para la consulta"]
+  },
+  "testimonials": {
+    "title": "Lo que cambia cuando llegás con tracking",
+    "items": [
+      "Placeholder vet: Cuando un dueño trae fechas y fotos, puedo hacer mejores preguntas en menos tiempo.",
+      "Placeholder dueño: Dejé de sentir que estaba improvisando en cada visita."
+    ]
+  },
+  "demo": {
+    "title": "Mini demo: ¿qué le dirías a tu vet?",
+    "placeholder": "Escribe lo que recuerdas de los últimos 30 días...",
+    "button": "¿Vs. lo que tendría con Frenchie Care?",
+    "resultTitle": "Reporte ejemplo de Frenchie Care",
+    "result": "Últimos 30 días: 12 registros, 5 fotos, picazón promedio 6/10, pico 9/10 el 15 de abril, cambio a comida con pollo el 12 de abril, dos episodios de oído y una nota de baño previo al brote."
+  },
+  "cta": { "title": "La próxima visita al vet puede ser completamente diferente.", "body": "Empezá a construir el historial de {dogName} hoy.", "button": "Crear historial gratis", "secondary": "Ver Founding Member" },
+  "footer": { "tagline": "Menos memoria improvisada. Más contexto veterinario.", "disclaimer": "Frenchie Care organiza información. Tu veterinario diagnostica y decide tratamientos.", "terms": "Términos", "privacy": "Privacidad" },
+  "images": {
+    "hero": "https://pikaso.cdnpk.net/private/production/4749335532/render.png?token=exp=1783036800~hmac=d7a4fca6a61f3fb6848a042d7781661f800896bca0d614a75f401c63cec5368d",
+    "problem": "https://pikaso.cdnpk.net/private/production/4749335927/render.png?token=exp=1783036800~hmac=23baffccdc41b15be58e31e5afe173ab3733ab6a8806495192956cf12bfa9671",
+    "report": "https://pikaso.cdnpk.net/private/production/4749343150/render.png?token=exp=1783036800~hmac=ffd22f4516b21fd8fad91539547220fdc95a4f3192fea7826781f32fec5963da",
+    "vet": "https://pikaso.cdnpk.net/private/production/4749336009/render.png?token=exp=1783036800~hmac=a16f5a376c9ce4bea78e5b11702af2d52b4165fbcb7af96de7baab1e67e69247",
+    "result": "https://pikaso.cdnpk.net/private/production/4749336280/render.png?token=exp=1783036800~hmac=53d083429dc8657d6003386fe79482a863b92293fd692f0f3d145019e9c488fe"
+  }
+}

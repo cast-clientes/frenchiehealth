@@ -1,0 +1,68 @@
+{
+  "slug": "ear-infections",
+  "analyticsName": "lp_ear_infections",
+  "meta": {
+    "title": "Recurring ear infections in French Bulldogs",
+    "description": "Find the patterns behind your Frenchie's recurring ear infections with episode, diet, humidity, and weekly care tracking.",
+    "keywords": "french bulldog ear infections, frenchie ear infection, french bulldog allergies"
+  },
+  "nav": {
+    "logo": "Frenchie Care",
+    "how": "How it helps",
+    "pricing": "Founding Member",
+    "signin": "Sign in",
+    "cta": "Start free"
+  },
+  "hero": {
+    "headline": "Why do {dogName}'s ear infections keep coming back?",
+    "story": [
+      "The first time your Frenchie shook their head like that, you thought it was minor. You went to the vet, got drops, and it improved. Three weeks later, it came back.",
+      "Then the guessing starts: the bath, the new food, the park, humidity, seasonal allergies, or just bad luck. You change drops, clean more often, and still the sour smell, red ear, and discomfort return.",
+      "The hard part is not caring for the ear. The hard part is treating the same fire again and again without knowing what keeps lighting it."
+    ]
+  },
+  "problem": {
+    "title": "The problem is not the infection.",
+    "subtitle": "The problem is that nobody is tracking the patterns.",
+    "body": "For Frenchies, ear episodes usually have a trigger: a protein they do not tolerate, moisture after a bath, pollen, heat, or an inconsistent cleaning routine. The pattern appears when you review organized weeks of data, not when you try to remember everything at the vet."
+  },
+  "stats": [
+    { "value": "1 in 4", "label": "Frenchies has recurring ear infections" },
+    { "value": "6+ months", "label": "to discover the most common trigger: food" },
+    { "value": "3 weeks", "label": "average to identify patterns with consistent tracking" }
+  ],
+  "solution": {
+    "eyebrow": "Frenchie Care for ears",
+    "title": "The ear module turns scattered episodes into a clear timeline.",
+    "body": "Track weekly cleaning, smell, redness, discharge, head shaking, and food changes. Frenchie Care connects the dots before each episode.",
+    "bullets": [
+      "Weekly ear review and cleaning checklist",
+      "Episode log with photos, notes, and severity",
+      "Correlation with food, environment, baths, and weather",
+      "Vet-ready summary for your next appointment"
+    ]
+  },
+  "testimonial": {
+    "quote": "Bruno had an infection every month. Once I tracked food and cleanings, we saw flares appeared after chicken. I showed the vet and finally had a concrete conversation.",
+    "name": "Placeholder: Bruno's mom",
+    "detail": "Replace with a real customer testimonial"
+  },
+  "cta": {
+    "title": "Start tracking {dogName}'s ears today.",
+    "body": "The first 100 founders try Frenchie Care free for 7 days and lock in Founding Member pricing.",
+    "button": "Start as a Founding Member",
+    "secondary": "See founder price"
+  },
+  "footer": {
+    "tagline": "Built for Frenchie owners who want to bring data to the vet, not memory.",
+    "disclaimer": "Frenchie Care is an educational tracking tool. It does not diagnose or replace a licensed veterinarian.",
+    "terms": "Terms",
+    "privacy": "Privacy"
+  },
+  "images": {
+    "hero": "https://pikaso.cdnpk.net/private/production/4749323050/render.png?token=exp=1783036800~hmac=c0a73dbee0c08b80f42b5909d2da23b3a0ca16999924d5b5527a58f30f76ee5f",
+    "problem": "https://pikaso.cdnpk.net/private/production/4749323068/render.png?token=exp=1783036800~hmac=2395f16d554e2800088dd8d7f54ab11323d65f6eba95944884ec30038499b152",
+    "solution": "https://pikaso.cdnpk.net/private/production/4749329634/render.png?token=exp=1783036800~hmac=9d318a1b12ff990ef12aa9b32e623071fc0b940ffd3fde6f2fce5582d0d49b28",
+    "result": "https://pikaso.cdnpk.net/private/production/4749323394/render.png?token=exp=1783036800~hmac=e4475cb523100269fd536118ed26ad96b4d624d8a3c02cdc1de125f41bf81992"
+  }
+}

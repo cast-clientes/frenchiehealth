@@ -1,0 +1,48 @@
+{
+  "slug": "vet-visits",
+  "analyticsName": "lp_vet_visits",
+  "meta": {
+    "title": "Veterinary history for French Bulldogs",
+    "description": "Turn your Frenchie's symptoms, photos, dates, and treatments into a clear report for every vet visit.",
+    "keywords": "french bulldog vet history, frenchie health report, dog vet tracker"
+  },
+  "nav": { "logo": "Frenchie Care", "how": "Report", "pricing": "Founding Member", "signin": "Sign in", "cta": "Start free" },
+  "hero": {
+    "headline": "How much time do you lose explaining the same thing to the vet at every visit?",
+    "beforeTitle": "Without Frenchie Care",
+    "afterTitle": "With Frenchie Care",
+    "before": "When was the last time he had that rash? Umm... maybe three months ago? Or four. And the previous vet prescribed... something. I do not remember the name.",
+    "after": "Here is the full history. Since March 3. 47 entries with photos. The highest spike was April 15, three days after changing food."
+  },
+  "problem": {
+    "title": "Why vets hate missing history",
+    "quote": "Most clinical reasoning mistakes start with incomplete history. It is not the owner's fault: nobody remembers everything from memory.",
+    "attribution": "Representative veterinarian quote"
+  },
+  "passport": {
+    "eyebrow": "Health passport",
+    "title": "A PDF report that speaks your vet's language.",
+    "body": "Frenchie Care gathers timeline, photos, dates, food, symptoms, treatments, vaccines, and notes. Share it by link or print it before the appointment starts.",
+    "bullets": ["Symptom timeline with photos", "Food and medication changes", "Severity spikes by date", "Consultation-ready notes"]
+  },
+  "testimonials": {
+    "title": "What changes when you arrive with tracking",
+    "items": ["Placeholder vet: When an owner brings dates and photos, I can ask better questions in less time.", "Placeholder owner: I stopped feeling like I was improvising at every visit."]
+  },
+  "demo": {
+    "title": "Mini demo: what would you tell your vet?",
+    "placeholder": "Write what you remember from the last 30 days...",
+    "button": "Versus what Frenchie Care would have?",
+    "resultTitle": "Example Frenchie Care report",
+    "result": "Last 30 days: 12 logs, 5 photos, average itch 6/10, peak 9/10 on April 15, changed to chicken food on April 12, two ear episodes, and one bath note before the flare."
+  },
+  "cta": { "title": "The next vet visit can be completely different.", "body": "Start building {dogName}'s history today.", "button": "Create free history", "secondary": "See Founding Member" },
+  "footer": { "tagline": "Less improvised memory. More veterinary context.", "disclaimer": "Frenchie Care organizes information. Your veterinarian diagnoses and decides treatments.", "terms": "Terms", "privacy": "Privacy" },
+  "images": {
+    "hero": "https://pikaso.cdnpk.net/private/production/4749335532/render.png?token=exp=1783036800~hmac=d7a4fca6a61f3fb6848a042d7781661f800896bca0d614a75f401c63cec5368d",
+    "problem": "https://pikaso.cdnpk.net/private/production/4749335927/render.png?token=exp=1783036800~hmac=23baffccdc41b15be58e31e5afe173ab3733ab6a8806495192956cf12bfa9671",
+    "report": "https://pikaso.cdnpk.net/private/production/4749343150/render.png?token=exp=1783036800~hmac=ffd22f4516b21fd8fad91539547220fdc95a4f3192fea7826781f32fec5963da",
+    "vet": "https://pikaso.cdnpk.net/private/production/4749336009/render.png?token=exp=1783036800~hmac=a16f5a376c9ce4bea78e5b11702af2d52b4165fbcb7af96de7baab1e67e69247",
+    "result": "https://pikaso.cdnpk.net/private/production/4749336280/render.png?token=exp=1783036800~hmac=53d083429dc8657d6003386fe79482a863b92293fd692f0f3d145019e9c488fe"
+  }
+}
