@@ -15,6 +15,7 @@
   "auth": {
     "signIn": "Log in",
     "signUp": "Create my account",
+    "fullName": "Your name",
     "email": "Your email",
     "password": "Your password",
     "magicLink": "Send me a magic link",
@@ -63,7 +64,7 @@
     "termsPoints": [
       "You need to be 18 or older to make an account.",
       "Keep your password safe — your account is yours to look after.",
-      "Free version: up to 5 check-ins and 3 chat messages a day (no vet download yet).",
+      "Basic plan ($4.99/mo): up to 3 check-ins and 5 chat messages, ever (no photos, no vet download).",
       "Full plan: as many check-ins and chats as you want, plus a download for your vet.",
       "Your plan renews on its own, but you can stop paying anytime from your preferences.",
       "Yearly plans: money back within 30 days (we split it fairly). Monthly plans don't have partial refunds.",
@@ -96,7 +97,7 @@
     "itchScore": "How much scratching?",
     "affectedZone": "Where?",
     "upgradePrompt": "Go full plan for unlimited tracking",
-    "freeLimit": "You've used {count} of 5 free check-ins",
+    "freeLimit": "You've used {count} of 3 Basic-plan check-ins",
     "weekSummaryTitle": "How {dogName} is doing this week",
     "noEpisodes": "No episodes this week",
     "notCheckedDays": "Not checked in {count} days",
@@ -179,7 +180,7 @@
     "placeholder": "Ask about your Frenchie's skin, food, or care...",
     "send": "Send",
     "sendMessage": "Send message",
-    "limitReached": "You've used your free chats. Go full plan for unlimited.",
+    "limitReached": "You've used your Basic-plan chats. Go full plan for unlimited.",
     "remaining": "{count} chats left today",
     "disclaimer": "I share general info, not vet advice.",
     "thinking": "Thinking...",
@@ -187,7 +188,7 @@
     "emptyState": "Ask me anything about your Frenchie's skin, food, or daily care! 🐾"
   },
   "subscription": {
-    "free": "Free plan",
+    "basic": "Basic plan",
     "paid": "Full plan",
     "upgradeTitle": "Unlock everything",
     "monthlyPlan": "Monthly",
@@ -213,7 +214,7 @@
     "termsHuman": [
       "🐾 This app helps you care for your Frenchie's skin — it's not a vet.",
       "🔞 You need to be 18 or older to open an account.",
-      "💛 Free version: up to 5 check-ins and 3 chat messages a day.",
+      "💛 Basic plan ($4.99/mo): up to 3 check-ins and 5 chat messages, ever.",
       "⭐ Full plan: unlimited check-ins, unlimited chat, and a download for your vet.",
       "🔄 Your plan renews on its own, but you can stop paying whenever you want.",
       "📄 You can read the full legal version below if you need it."
@@ -357,7 +358,7 @@
   "paywall": {
     "title": "Unlock your Frenchie's full potential",
     "headline": "{dogName} deserves the best care",
-    "subheadline": "You've hit your free limit. Go full plan to keep tracking.",
+    "subheadline": "You've hit your Basic-plan limit. Go full plan to keep tracking.",
     "founderOffer": "Founding Member Offer",
     "foundingOffer": "Founding member deal",
     "foundingDescription": "Lock in this price forever — only {spotsLeft} spots left",
@@ -379,12 +380,11 @@
     "strikePrice": "$18.99/mo",
     "ctaMonthly": "Start monthly — $8.99/mo",
     "ctaAnnual": "Start yearly — $6.25/mo",
-    "continueFree": "Stay free ({count} left)",
     "triggers": {
-      "entry_limit": "You've used your 3 free check-ins",
+      "entry_limit": "You've used your 3 Basic-plan check-ins",
       "photo_upload": "Photos are a full-plan perk",
       "module_access": "This module is a full-plan perk",
-      "chat_limit": "You've used your 5 free chats"
+      "chat_limit": "You've used your 5 Basic-plan chats"
     }
   },
   "founding": {

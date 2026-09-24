@@ -4,6 +4,7 @@ import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { GTMNoScript, GTMScript } from "@/components/analytics/GTMScript";
+import { ClarityScript } from "@/components/analytics/ClarityScript";
 import { PageViewTracker } from "@/components/analytics/PageViewTracker";
 import CookieConsent from "@/components/CookieConsent";
 import LanguageSwitch from "@/components/LanguageSwitch";
@@ -63,6 +64,7 @@ export default async function LocaleLayout({
     <>
       <GTMScript />
       <GTMNoScript />
+      <ClarityScript />
       <NextIntlClientProvider messages={messages}>
         <PageViewTracker />
         {children}

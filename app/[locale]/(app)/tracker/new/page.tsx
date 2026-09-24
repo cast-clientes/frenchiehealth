@@ -10,6 +10,7 @@ import { Card } from "@/components/ui/Card";
 import { ChevronRight, CheckCircle2, Camera } from "lucide-react";
 import PaywallModal from "@/components/PaywallModal";
 import { analytics } from "@/lib/analytics/events";
+import { isFullPlan } from "@/lib/subscriptions";
 
 const ZONES = ["facial_folds", "back", "paws", "ears", "other"] as const;
 const LIMBS = ["front_left", "front_right", "back_left", "back_right", "unknown"] as const;
@@ -155,8 +156,8 @@ export default function DailyLogPage() {
         return;
       }
 
-      const { data: sub } = await supabase.from("subscriptions").select("plan").eq("user_id", user.id).single();
-      setIsPaid(sub?.plan === "paid");
+      const { data: sub } = await supabase.from("subscriptions").select("plan, plan_type").eq("user_id", user.id).single();
+      setIsPaid(isFullPlan(sub));
 
       const { data: dogs } = await supabase.from("dogs").select("id, name, nickname, photo_url").eq("user_id", user.id).limit(1);
       const dog = dogs?.[0];

@@ -10,6 +10,7 @@ import { cn } from "@/lib/utils";
 import { Link } from "@/i18n/navigation";
 import PaywallModal from "@/components/PaywallModal";
 import { analytics } from "@/lib/analytics/events";
+import { isFullPlan } from "@/lib/subscriptions";
 
 // ─── Typing channel names follow the pattern chat-typing-{userId}
 // Admin dashboards or multi-tab sessions can subscribe to the same channel
@@ -81,11 +82,11 @@ export default function ChatPage() {
 
       const { data: sub } = await supabase
         .from("subscriptions")
-        .select("plan")
+        .select("plan, plan_type")
         .eq("user_id", user.id)
         .single();
 
-      setIsPaid(sub?.plan === "paid");
+      setIsPaid(isFullPlan(sub));
 
       const { data: dogs } = await supabase
         .from("dogs")
@@ -105,7 +106,7 @@ export default function ChatPage() {
         }
       }
 
-      if (sub?.plan !== "paid") {
+      if (!isFullPlan(sub)) {
         const { count } = await supabase
           .from("chat_messages")
           .select("*", { count: "exact", head: true })

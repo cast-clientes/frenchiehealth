@@ -9,6 +9,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
 });
 
 const PRICE_MAP: Record<string, string | undefined> = {
+  basic: process.env.STRIPE_PRICE_BASIC,
   monthly: process.env.STRIPE_PRICE_MONTHLY,
   annual: process.env.STRIPE_PRICE_ANNUAL,
   founder_monthly: process.env.STRIPE_PRICE_FOUNDER_MONTHLY,
@@ -38,7 +39,7 @@ export async function POST(req: NextRequest) {
     payment_method_types: ["card"],
     mode: "subscription",
     line_items: [{ price: priceId, quantity: 1 }],
-    success_url: `${baseUrl}/${locale}/upgrade?success=true`,
+    success_url: `${baseUrl}/${locale}/upgrade?success=true&session_id={CHECKOUT_SESSION_ID}`,
     cancel_url: `${baseUrl}/${locale}/upgrade?canceled=true`,
     metadata: { user_id: user.id, plan_type: planType },
   });

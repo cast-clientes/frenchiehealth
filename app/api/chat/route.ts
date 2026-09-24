@@ -1,9 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createClient } from "@/lib/supabase/server";
 import { buildAIChatIdentityBlock } from "@/lib/parentDisplay";
+import { isFullPlan } from "@/lib/subscriptions";
 
 export const dynamic = "force-dynamic";
 
+// Basic plan ($4.99/mo) message cap — full plans (monthly/annual/founder) are unlimited.
 const FREE_CHAT_TOTAL_LIMIT = parseInt(process.env.FREE_CHAT_TOTAL_LIMIT ?? "5", 10);
 
 export async function POST(req: NextRequest) {
@@ -18,11 +20,11 @@ export async function POST(req: NextRequest) {
 
   const { data: sub } = await supabase
     .from("subscriptions")
-    .select("plan")
+    .select("plan, plan_type")
     .eq("user_id", user.id)
     .single();
 
-  const isPaid = sub?.plan === "paid";
+  const isPaid = isFullPlan(sub);
 
   if (!isPaid) {
     const { count } = await supabase

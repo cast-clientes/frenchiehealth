@@ -1,6 +1,8 @@
 import { redirect } from "next/navigation";
+import { headers } from "next/headers";
 import { createClient } from "@/lib/supabase/server";
 import { AppShell } from "@/components/layout/AppShell";
+import { hasAnyPaidPlan } from "@/lib/subscriptions";
 
 export default async function AppLayout({
   children,
@@ -34,6 +36,22 @@ export default async function AppLayout({
 
   if (!hasAll) {
     redirect(`/${locale}/onboarding`);
+  }
+
+  // Guard: must have completed a paid checkout before entering the app
+  const pathname = (await headers()).get("x-pathname") ?? "";
+  const isUpgradeRoute = pathname === "/upgrade" || pathname.startsWith("/upgrade/");
+
+  if (!isUpgradeRoute) {
+    const { data: sub } = await supabase
+      .from("subscriptions")
+      .select("plan, plan_type")
+      .eq("user_id", user.id)
+      .single();
+
+    if (!hasAnyPaidPlan(sub)) {
+      redirect(`/${locale}/upgrade`);
+    }
   }
 
   return <AppShell>{children}</AppShell>;

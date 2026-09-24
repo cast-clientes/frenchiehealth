@@ -11,7 +11,7 @@
     "how": "Cómo ayuda",
     "pricing": "Founding Member",
     "signin": "Entrar",
-    "cta": "Empezar gratis"
+    "cta": "Comenzar"
   },
   "hero": {
     "headline": "¿Por qué las infecciones de oído de {dogName} siguen volviendo?",
@@ -49,7 +49,7 @@
   },
   "cta": {
     "title": "Empezá a registrar los oídos de {dogName} hoy.",
-    "body": "Los primeros 100 fundadores prueban Frenchie Care gratis por 7 días y bloquean el precio Founding Member.",
+    "body": "Los primeros 100 fundadores bloquean el precio Founding Member de por vida.",
     "button": "Empezar como Founding Member",
     "secondary": "Ver precio fundador"
   },

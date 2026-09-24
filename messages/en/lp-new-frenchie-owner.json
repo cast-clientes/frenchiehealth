@@ -6,7 +6,7 @@
     "description": "The quick guide for new Frenchie owners: folds, heat, allergies, ears, breathing, vet visits, and tracking from day one.",
     "keywords": "new french bulldog owner, french bulldog puppy care, adopt frenchie"
   },
-  "nav": { "logo": "Frenchie Care", "how": "Checklist", "pricing": "Founding Member", "signin": "Sign in", "cta": "Start free" },
+  "nav": { "logo": "Frenchie Care", "how": "Checklist", "pricing": "Founding Member", "signin": "Sign in", "cta": "Get started" },
   "hero": {
     "headline": "Owning a Frenchie is different from owning any other dog. Nobody told you, right?",
     "intro": "The first week with a Frenchie is chaotic. Googling gives you conflicting advice. And your veterinarian has 15 minutes with you."
@@ -39,7 +39,7 @@
     "body": "Frenchie families share milestones, questions, and small wins every day.",
     "posts": ["First bath with no drama", "Does anyone else clean folds twice a day?", "Today we learned to skip heat walks"]
   },
-  "cta": { "title": "Start {dogName}'s history today.", "body": "When they are 5, you will be glad you did.", "button": "Create free history", "secondary": "See founder offer" },
+  "cta": { "title": "Start {dogName}'s history today.", "body": "When they are 5, you will be glad you did.", "button": "Create your history", "secondary": "See founder offer" },
   "footer": { "tagline": "A clearer start for a breed that needs different care.", "disclaimer": "Frenchie Care educates and tracks. It does not replace veterinary attention.", "terms": "Terms", "privacy": "Privacy" },
   "images": {
     "hero": "https://pikaso.cdnpk.net/private/production/4749332710/render.png?token=exp=1783036800~hmac=2c8eb33b088c459e953a6218318cc4a9972c28763ed754caa9a8694bdc30ecbd",

@@ -146,7 +146,7 @@ export default function OnboardingPage() {
       dogNickname.trim() || "unknown",
       selectedRole === "custom" ? customRole.trim() || "custom" : selectedRole ?? "unknown",
     );
-    router.push("/dogs/new");
+    router.push("/upgrade");
   }
 
   const sections: {

@@ -1,6 +1,14 @@
 import { redirect } from "next/navigation";
 import { createClient, createServiceClient } from "@/lib/supabase/server";
 
+const PRICE_BY_PLAN_TYPE: Record<string, number> = {
+  basic: 4.99,
+  monthly: 18.99,
+  annual: 74.99 / 12,
+  founder_monthly: 8.99,
+  founder_annual: 59.99 / 12,
+};
+
 function StatCard({ label, value, sub, color = "#e8714a" }: { label: string; value: string | number; sub?: string; color?: string }) {
   return (
     <div style={{ background: "#1e293b", borderRadius: "1rem", padding: "1.25rem 1.5rem", borderLeft: `4px solid ${color}` }}>
@@ -30,6 +38,8 @@ export default async function AdminPage() {
     { count: totalDogs },
     { count: paidSubs },
     { count: foundingSubs },
+    { count: legacyFreeUsers },
+    { data: activePaidPlanTypes },
     { count: totalSkinEntries },
     { count: totalChatMessages },
     { count: totalWeightEntries },
@@ -42,6 +52,8 @@ export default async function AdminPage() {
     service.from("dogs").select("*", { count: "exact", head: true }),
     service.from("subscriptions").select("*", { count: "exact", head: true }).eq("plan", "paid").eq("status", "active"),
     service.from("subscriptions").select("*", { count: "exact", head: true }).in("plan_type", ["founder_monthly", "founder_annual"]).eq("status", "active"),
+    service.from("subscriptions").select("*", { count: "exact", head: true }).eq("plan", "free"),
+    service.from("subscriptions").select("plan_type").eq("plan", "paid").eq("status", "active"),
     service.from("skin_entries").select("*", { count: "exact", head: true }),
     service.from("chat_messages").select("*", { count: "exact", head: true }).eq("role", "user"),
     service.from("weight_entries").select("*", { count: "exact", head: true }),
@@ -52,10 +64,15 @@ export default async function AdminPage() {
   ]);
 
   const totalEntries = (totalSkinEntries ?? 0) + (totalWeightEntries ?? 0) + (totalRespEntries ?? 0);
-  const freeUsers = (totalUsers ?? 0) - (paidSubs ?? 0);
   const conversionRate = totalUsers ? (((paidSubs ?? 0) / totalUsers) * 100).toFixed(1) : "0";
 
-  const monthlyRevEst = (paidSubs ?? 0) * 8.99;
+  const basicPlanUsers = (activePaidPlanTypes ?? []).filter((s) => s.plan_type === "basic").length;
+  const fullPlanUsers = (activePaidPlanTypes ?? []).length - basicPlanUsers;
+
+  const monthlyRevEst = (activePaidPlanTypes ?? []).reduce(
+    (sum, s) => sum + (PRICE_BY_PLAN_TYPE[s.plan_type ?? ""] ?? 0),
+    0,
+  );
 
   const today = new Date().toISOString().split("T")[0];
   const thirtyDaysAgo = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString().split("T")[0];
@@ -85,8 +102,12 @@ export default async function AdminPage() {
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "1rem" }}>
           <StatCard label="Total usuarios" value={totalUsers ?? 0} sub={`+${newUsersMonth ?? 0} últimos 30 días`} color="#e8714a" />
           <StatCard label="Usuarios pagos" value={paidSubs ?? 0} sub={`${conversionRate}% conversión`} color="#22c55e" />
-          <StatCard label="Usuarios free" value={freeUsers} sub="Sin suscripción activa" color="#64748b" />
+          <StatCard label="Plan Basic ($4.99)" value={basicPlanUsers} color="#7bb8d4" />
+          <StatCard label="Plan completo+" value={fullPlanUsers} sub="Monthly/Annual/Founder" color="#22c55e" />
           <StatCard label="Founding members" value={foundingSubs ?? 0} sub={`${spotsLeft} spots restantes`} color="#f59e0b" />
+          {(legacyFreeUsers ?? 0) > 0 && (
+            <StatCard label="Legacy free (pre-cambio)" value={legacyFreeUsers ?? 0} sub="Cuentas de antes del cambio a pago obligatorio" color="#64748b" />
+          )}
         </div>
       </section>
 
@@ -94,7 +115,7 @@ export default async function AdminPage() {
       <section>
         <h2 style={{ fontSize: "0.875rem", fontWeight: 700, color: "#64748b", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "1rem" }}>Revenue (estimado)</h2>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "1rem" }}>
-          <StatCard label="MRR estimado" value={`$${monthlyRevEst.toFixed(0)}`} sub="Basado en $8.99/mes × pagos" color="#a855f7" />
+          <StatCard label="MRR estimado" value={`$${monthlyRevEst.toFixed(0)}`} sub="Basado en precio real por tipo de plan" color="#a855f7" />
           <StatCard label="ARR estimado" value={`$${(monthlyRevEst * 12).toFixed(0)}`} sub="Anualizado" color="#7c3aed" />
         </div>
       </section>

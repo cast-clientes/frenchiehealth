@@ -1,9 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createClient } from "@/lib/supabase/server";
 import { generateRecommendations } from "@/lib/recommendations";
+import { isFullPlan } from "@/lib/subscriptions";
 
 export const dynamic = "force-dynamic";
 
+// Basic plan ($4.99/mo) entry cap — full plans (monthly/annual/founder) are unlimited.
 const FREE_ENTRIES_LIMIT = parseInt(process.env.FREE_ENTRIES_LIMIT ?? "3", 10);
 
 export async function POST(req: NextRequest) {
@@ -16,15 +18,15 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
-  // Check free plan limit
+  // Check basic plan limit
   const { data: sub } = await supabase
     .from("subscriptions")
-    .select("plan")
+    .select("plan, plan_type")
     .eq("user_id", user.id)
     .single();
 
-  if (sub?.plan !== "paid") {
-    // NOTE: The free tier limit is intentionally per-user (all dogs combined),
+  if (!isFullPlan(sub)) {
+    // NOTE: The basic-tier limit is intentionally per-user (all dogs combined),
     // not per-dog. A user with multiple dogs shares a single entry quota.
     // If a per-dog limit is ever needed, add .eq('dog_id', dog_id) here and
     // move the dog ownership check above this block.
@@ -62,8 +64,8 @@ export async function POST(req: NextRequest) {
     );
   }
 
-  // Photo upload is a paid feature
-  if (sub?.plan !== "paid" && photo_url) {
+  // Photo upload is a full-plan feature
+  if (!isFullPlan(sub) && photo_url) {
     return NextResponse.json(
       { error: "photo_upload_not_allowed" },
       { status: 400 }

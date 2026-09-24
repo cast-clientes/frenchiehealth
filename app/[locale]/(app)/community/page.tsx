@@ -4,6 +4,7 @@ import { Link } from "@/i18n/navigation";
 import RealtimeCommunityFeed, {
   type CommunityPost,
 } from "@/components/realtime/RealtimeCommunityFeed";
+import { isFullPlan } from "@/lib/subscriptions";
 
 export default async function CommunityPage() {
   const supabase = await createClient();
@@ -14,11 +15,11 @@ export default async function CommunityPage() {
 
   const { data: sub } = await supabase
     .from("subscriptions")
-    .select("plan, status")
+    .select("plan, plan_type, status")
     .eq("user_id", user!.id)
     .single();
 
-  const isPaid = sub?.plan === "paid";
+  const isPaid = isFullPlan(sub);
   const es = locale === "es";
 
   // Fetch initial posts only for paid users to avoid unnecessary reads

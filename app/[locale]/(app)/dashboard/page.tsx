@@ -6,6 +6,7 @@ import { Card } from "@/components/ui/Card";
 import { Link } from "@/i18n/navigation";
 import { greet, interpolateDogText } from "@/lib/parentDisplay";
 import Image from "next/image";
+import { isFullPlan } from "@/lib/subscriptions";
 
 const MODULES = [
   { key: "skin", icon: "🐾", href: "/tracker", available: true, image: "/images/dashboard/module-skin.webp", color: "#E8714A" },
@@ -96,7 +97,7 @@ export default async function DashboardPage() {
   // Fetch subscription info
   const { data: sub } = await supabase
     .from("subscriptions")
-    .select("plan, status")
+    .select("plan, plan_type, status")
     .eq("user_id", user.id)
     .single();
 
@@ -117,7 +118,7 @@ export default async function DashboardPage() {
 
   const tip = tips?.[0];
 
-  const isPaid = sub?.plan === "paid";
+  const isPaid = isFullPlan(sub);
   const entryCount = totalEntryCount ?? 0;
   const firstName = profile?.full_name?.split(" ")[0] ?? "there";
 

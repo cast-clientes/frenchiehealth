@@ -1,11 +1,13 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
+import { Suspense, useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
+import { useRouter } from "@/i18n/navigation";
 import { useLocale, useTranslations } from "next-intl";
 import { CheckCircle, ChevronLeft, Zap } from "lucide-react";
 import { analytics } from "@/lib/analytics/events";
 import { Button } from "@/components/ui/Button";
+import { createClient } from "@/lib/supabase/client";
 
 const FEATURES = [
   "unlimited_entries",
@@ -16,8 +18,9 @@ const FEATURES = [
 
 const OFFER_END = new Date("2026-07-31T23:59:59Z");
 
-type PlanType = "founder_monthly" | "founder_annual" | "monthly" | "annual";
+type PlanType = "basic" | "founder_monthly" | "founder_annual" | "monthly" | "annual";
 
+const BASIC_MONTHLY_PRICE = 4.99;
 const REGULAR_MONTHLY_PRICE = 18.99;
 const EARLY_ADOPTER_BONUS = 10;
 const FOUNDER_MONTHLY_PRICE = REGULAR_MONTHLY_PRICE - EARLY_ADOPTER_BONUS;
@@ -34,6 +37,7 @@ const FOUNDER_ANNUAL_MONTHLY_EQUIVALENT =
 const REGULAR_ANNUAL_PRICE = Math.round(REGULAR_MONTHLY_PRICE * 12 * 100) / 100;
 
 const PLAN_PRICES: Record<PlanType, number> = {
+  basic: BASIC_MONTHLY_PRICE,
   founder_monthly: FOUNDER_MONTHLY_PRICE,
   founder_annual: FOUNDER_ANNUAL_PRICE,
   monthly: REGULAR_MONTHLY_PRICE,
@@ -42,8 +46,9 @@ const PLAN_PRICES: Record<PlanType, number> = {
 
 const ANALYTICS_PLAN: Record<
   PlanType,
-  "founding_monthly" | "founding_annual" | "monthly" | "annual"
+  "basic" | "founding_monthly" | "founding_annual" | "monthly" | "annual"
 > = {
+  basic: "basic",
   founder_monthly: "founding_monthly",
   founder_annual: "founding_annual",
   monthly: "monthly",
@@ -80,9 +85,18 @@ function getCountdown(): Countdown {
 }
 
 export default function UpgradePage() {
+  return (
+    <Suspense fallback={null}>
+      <UpgradePageInner />
+    </Suspense>
+  );
+}
+
+function UpgradePageInner() {
   const t = useTranslations();
   const locale = useLocale();
   const router = useRouter();
+  const searchParams = useSearchParams();
   const es = locale === "es";
 
   const [loading, setLoading] = useState<PlanType | null>(null);
@@ -91,6 +105,8 @@ export default function UpgradePage() {
     null,
   );
   const [countdown, setCountdown] = useState<Countdown>(getCountdown());
+  const [confirmingPayment, setConfirmingPayment] = useState(false);
+  const [confirmTimedOut, setConfirmTimedOut] = useState(false);
 
   useEffect(() => {
     fetch("/api/founding-status")
@@ -110,6 +126,66 @@ export default function UpgradePage() {
     const id = setInterval(() => setCountdown(getCountdown()), 1000);
     return () => clearInterval(id);
   }, []);
+
+  // After a successful Stripe checkout, the webhook may not have written the
+  // subscriptions row yet by the time Stripe redirects back — poll briefly
+  // instead of hard-redirecting into a payment gate that hasn't caught up.
+  useEffect(() => {
+    if (searchParams.get("success") !== "true") return;
+
+    setConfirmingPayment(true);
+    const sessionId = searchParams.get("session_id") ?? "";
+    const supabase = createClient();
+    let cancelled = false;
+    const MAX_ATTEMPTS = 7;
+
+    async function poll(attempt: number) {
+      const {
+        data: { user },
+      } = await supabase.auth.getUser();
+      if (!user || cancelled) return;
+
+      const { data: sub } = await supabase
+        .from("subscriptions")
+        .select("plan, plan_type")
+        .eq("user_id", user.id)
+        .single();
+
+      if (sub?.plan === "paid") {
+        const planType = (sub.plan_type ?? "monthly") as PlanType;
+        const isFounder =
+          planType === "founder_monthly" || planType === "founder_annual";
+        analytics.purchaseCompleted(
+          sessionId,
+          planType,
+          PLAN_PRICES[planType] ?? 0,
+          isFounder,
+        );
+
+        const { data: dogs } = await supabase
+          .from("dogs")
+          .select("id")
+          .eq("user_id", user.id)
+          .limit(1);
+
+        router.push(dogs && dogs.length > 0 ? "/dashboard" : "/dogs/new");
+        return;
+      }
+
+      if (attempt < MAX_ATTEMPTS && !cancelled) {
+        setTimeout(() => poll(attempt + 1), 1500);
+      } else if (!cancelled) {
+        setConfirmingPayment(false);
+        setConfirmTimedOut(true);
+      }
+    }
+
+    poll(0);
+    return () => {
+      cancelled = true;
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchParams]);
 
   async function handleCheckout(planType: PlanType) {
     setLoading(planType);
@@ -137,6 +213,37 @@ export default function UpgradePage() {
     founderStatus !== null
       ? founderStatus.total_spots - founderStatus.spots_taken
       : null;
+
+  if (confirmingPayment) {
+    return (
+      <div className="px-4 pt-10 pb-6">
+        <div className="bg-white border-2 border-[var(--brown-100)] rounded-2xl p-6 text-center">
+          <Zap className="w-10 h-10 text-[var(--accent)] mx-auto mb-3 animate-pulse" />
+          <p className="text-sm font-semibold text-[var(--brown-700)]">
+            {es ? "Confirmando tu pago..." : "Confirming your payment..."}
+          </p>
+        </div>
+      </div>
+    );
+  }
+
+  if (confirmTimedOut) {
+    return (
+      <div className="px-4 pt-10 pb-6">
+        <div className="bg-white border-2 border-[var(--brown-100)] rounded-2xl p-6 text-center space-y-3">
+          <Zap className="w-10 h-10 text-[var(--accent)] mx-auto" />
+          <p className="text-sm font-semibold text-[var(--brown-700)]">
+            {es
+              ? "Tu pago sigue procesándose. Puede tardar un minuto."
+              : "Your payment is still processing. It can take a minute."}
+          </p>
+          <Button onClick={() => router.push("/dashboard")} className="w-full">
+            {es ? "Continuar" : "Continue"}
+          </Button>
+        </div>
+      </div>
+    );
+  }
 
   if (founderStatus === null) {
     return (
@@ -177,6 +284,31 @@ export default function UpgradePage() {
             ? "Registro ilimitado · IA · Pasaporte · Comunidad"
             : "Unlimited tracking · AI · Passport · Community"}
         </p>
+      </div>
+
+      <div className="bg-white border-2 border-[var(--brown-100)] rounded-2xl p-5">
+        <div className="flex justify-between items-center mb-1">
+          <span className="font-semibold text-[var(--brown-700)]">Basic</span>
+          <span className="text-2xl font-bold text-[var(--brown-800)]">
+            ${price(BASIC_MONTHLY_PRICE)}
+            <span className="text-sm font-normal text-[var(--brown-400)]">
+              /mo
+            </span>
+          </span>
+        </div>
+        <p className="text-xs text-[var(--brown-400)] mb-4">
+          {es
+            ? "3 chequeos y 5 mensajes de chat, sin fotos."
+            : "3 check-ins and 5 chat messages, no photos."}
+        </p>
+        <Button
+          onClick={() => handleCheckout("basic")}
+          loading={loading === "basic"}
+          disabled={loading !== null}
+          className="w-full"
+        >
+          {es ? "Empezar con Basic" : "Start with Basic"}
+        </Button>
       </div>
 
       {offerActive ? (

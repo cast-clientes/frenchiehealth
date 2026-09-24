@@ -6,7 +6,7 @@
     "description": "Learn to manage Frenchie breathing, heat, and warning signs with episode, temperature, and activity tracking.",
     "keywords": "frenchie breathing problems, french bulldog BOAS, french bulldog heat stroke"
   },
-  "nav": { "logo": "Frenchie Care", "how": "Signals", "pricing": "Founding Member", "signin": "Sign in", "cta": "Start free" },
+  "nav": { "logo": "Frenchie Care", "how": "Signals", "pricing": "Founding Member", "signin": "Sign in", "cta": "Get started" },
   "hero": {
     "headline": "Frenchies do not just “breathe weird”: they have a condition you can manage",
     "subhead": "Your Frenchie is not broken. They are built differently.",

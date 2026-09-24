@@ -15,6 +15,7 @@
   "auth": {
     "signIn": "Entrar a mi cuenta",
     "signUp": "Crear mi cuenta",
+    "fullName": "Tu nombre",
     "email": "Tu correo",
     "password": "Tu contraseña",
     "magicLink": "Enviarme un enlace mágico",
@@ -63,7 +64,7 @@
     "termsPoints": [
       "Necesitás tener 18 años o más para crear tu cuenta.",
       "Cuidá tu contraseña — tu cuenta es tuya y vos la cuidás.",
-      "Versión gratuita: hasta 5 chequeos y 3 mensajes de chat al día (todavía sin descarga para el vet).",
+      "Plan Basic ($4.99/mes): hasta 3 chequeos y 5 mensajes de chat, de por vida (sin fotos, sin descarga para el vet).",
       "Plan completo: todos los chequeos y chats que quieras, más una descarga para tu veterinario.",
       "Tu plan se renueva solo, pero podés dejar de pagar cuando quieras desde tus preferencias.",
       "Planes anuales: te devolvemos el dinero dentro de los 30 días (lo dividimos de forma justa). Los planes mensuales no tienen devoluciones parciales.",
@@ -96,7 +97,7 @@
     "itchScore": "¿Cuánto se rasca?",
     "affectedZone": "¿Dónde?",
     "upgradePrompt": "Pásate al plan completo para registro ilimitado",
-    "freeLimit": "Has usado {count} de 5 chequeos gratis",
+    "freeLimit": "Has usado {count} de 3 chequeos del plan Basic",
     "weekSummaryTitle": "Cómo está {dogName} esta semana",
     "noEpisodes": "Sin episodios esta semana",
     "notCheckedDays": "No revisados hace {count} días",
@@ -179,7 +180,7 @@
     "placeholder": "Pregunta sobre la piel, comida o cuidado de tu Frenchie...",
     "send": "Enviar",
     "sendMessage": "Enviar mensaje",
-    "limitReached": "Usaste tus chats gratis. Pásate al plan completo para chat ilimitado.",
+    "limitReached": "Usaste tus chats del plan Basic. Pásate al plan completo para chat ilimitado.",
     "remaining": "Te quedan {count} chats hoy",
     "disclaimer": "Te doy info general, no consejo veterinario.",
     "thinking": "Pensando...",
@@ -187,7 +188,7 @@
     "emptyState": "¡Pregúntame lo que quieras sobre la piel, comida o cuidado diario de tu Frenchie! 🐾"
   },
   "subscription": {
-    "free": "Plan gratis",
+    "basic": "Plan Basic",
     "paid": "Plan completo",
     "upgradeTitle": "Desbloquea todo",
     "monthlyPlan": "Mensual",
@@ -213,7 +214,7 @@
     "termsHuman": [
       "🐾 Esta app te ayuda a cuidar la piel de tu Frenchie — no es un veterinario.",
       "🔞 Necesitás tener 18 años o más para abrir tu cuenta.",
-      "💛 Versión gratuita: hasta 5 chequeos y 3 mensajes de chat al día.",
+      "💛 Plan Basic ($4.99/mes): hasta 3 chequeos y 5 mensajes de chat, de por vida.",
       "⭐ Plan completo: chequeos sin límite, chat sin límite y una descarga para tu vet.",
       "🔄 Tu plan se renueva solo, pero podés dejar de pagar cuando quieras.",
       "📄 Abajo podés leer la versión legal completa si la necesitás."
@@ -357,7 +358,7 @@
   "paywall": {
     "title": "Desbloquea el potencial completo de tu Frenchie",
     "headline": "{dogName} merece el mejor cuidado",
-    "subheadline": "Llegaste a tu límite gratis. Pásate al plan completo para seguir registrando.",
+    "subheadline": "Llegaste a tu límite del plan Basic. Pásate al plan completo para seguir registrando.",
     "founderOffer": "Oferta Founding Member",
     "foundingOffer": "Oferta de miembro fundador",
     "foundingDescription": "Bloquea este precio para siempre — solo quedan {spotsLeft} lugares",
@@ -379,12 +380,11 @@
     "strikePrice": "$18.99/mes",
     "ctaMonthly": "Empezar mensual — $8.99/mes",
     "ctaAnnual": "Empezar anual — $6.25/mes",
-    "continueFree": "Seguir gratis (quedan {count})",
     "triggers": {
-      "entry_limit": "Usaste tus 3 chequeos gratis",
+      "entry_limit": "Usaste tus 3 chequeos del plan Basic",
       "photo_upload": "Las fotos son del plan completo",
       "module_access": "Este módulo es del plan completo",
-      "chat_limit": "Usaste tus 5 chats gratis"
+      "chat_limit": "Usaste tus 5 chats del plan Basic"
     }
   },
   "founding": {

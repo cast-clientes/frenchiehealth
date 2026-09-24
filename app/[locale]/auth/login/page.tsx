@@ -26,6 +26,7 @@ export default function LoginPage() {
   const t = useTranslations();
   const router = useRouter();
   const [mode, setMode] = useState<"signin" | "signup">("signin");
+  const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [sent, setSent] = useState(false);
@@ -45,6 +46,7 @@ export default function LoginPage() {
         email,
         password,
         options: {
+          data: { full_name: fullName.trim() },
           emailRedirectTo: `${window.location.origin}/auth/callback`,
         },
       });
@@ -118,6 +120,16 @@ export default function LoginPage() {
           ) : (
             <>
               <form onSubmit={handleSubmit} className="space-y-4">
+                {mode === "signup" && (
+                  <Input
+                    type="text"
+                    label={t("auth.fullName")}
+                    value={fullName}
+                    onChange={(e) => setFullName(e.target.value)}
+                    placeholder="Juan Pérez"
+                    required
+                  />
+                )}
                 <Input
                   type="email"
                   label={t("auth.email")}

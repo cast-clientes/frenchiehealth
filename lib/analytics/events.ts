@@ -69,7 +69,7 @@ export const analytics = {
     }),
 
   paywallCTAClicked: (
-    plan: "founding_monthly" | "founding_annual" | "monthly" | "annual",
+    plan: "basic" | "founding_monthly" | "founding_annual" | "monthly" | "annual",
   ) =>
     push({
       event: "paywall_cta_clicked",

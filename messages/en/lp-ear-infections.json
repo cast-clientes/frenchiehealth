@@ -11,7 +11,7 @@
     "how": "How it helps",
     "pricing": "Founding Member",
     "signin": "Sign in",
-    "cta": "Start free"
+    "cta": "Get started"
   },
   "hero": {
     "headline": "Why do {dogName}'s ear infections keep coming back?",
@@ -49,7 +49,7 @@
   },
   "cta": {
     "title": "Start tracking {dogName}'s ears today.",
-    "body": "The first 100 founders try Frenchie Care free for 7 days and lock in Founding Member pricing.",
+    "body": "The first 100 founders lock in Founding Member pricing for life.",
     "button": "Start as a Founding Member",
     "secondary": "See founder price"
   },

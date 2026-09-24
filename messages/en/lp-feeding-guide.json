@@ -6,7 +6,7 @@
     "description": "A practical guide to detect whether food is contributing to your Frenchie's skin, ear, or digestion problems.",
     "keywords": "french bulldog food, frenchie food allergies, french bulldog elimination diet"
   },
-  "nav": { "logo": "Frenchie Care", "how": "Guide", "pricing": "Founding Member", "signin": "Sign in", "cta": "Start free" },
+  "nav": { "logo": "Frenchie Care", "how": "Guide", "pricing": "Founding Member", "signin": "Sign in", "cta": "Get started" },
   "hero": {
     "headline": "The food you feed today may be causing your Frenchie's skin problems",
     "subhead": "Stop switching expensive bags blindly. Start with a simple, trackable plan built for Frenchies."
@@ -42,7 +42,7 @@
     "title": "Owners who stopped guessing",
     "testimonials": ["I changed five foods before tracking. The pattern showed up when I stopped mixing treats.", "My vet could see dates, photos, and food. The visit felt completely different."]
   },
-  "cta": { "title": "Start {dogName}'s food plan with data.", "body": "Founding Member: 7 free days for the first 100 founders.", "button": "Start free", "secondary": "See offer" },
+  "cta": { "title": "Start {dogName}'s food plan with data.", "body": "Founding Member: lock in $8.99/mo for life, first 100 founders only.", "button": "Get started", "secondary": "See offer" },
   "footer": { "tagline": "Food, symptoms, and decisions in one timeline.", "disclaimer": "Frenchie Care does not diagnose allergies. It helps you track data for better veterinary conversations.", "terms": "Terms", "privacy": "Privacy" },
   "images": {
     "hero": "https://pikaso.cdnpk.net/private/production/4749325730/render.png?token=exp=1783036800~hmac=23bd6dfe2262608bc4c13b5f6cf71d9056a54f23d982d150a74e727cd58c79af",

@@ -212,7 +212,7 @@ export interface Database {
           stripe_subscription_id: string | null;
           status: "active" | "canceled" | "past_due" | "trialing" | "incomplete";
           plan: "free" | "paid";
-          plan_type: "monthly" | "annual" | "founder_monthly" | "founder_annual" | null;
+          plan_type: "basic" | "monthly" | "annual" | "founder_monthly" | "founder_annual" | null;
           renewal_date: string | null;
           created_at: string;
           updated_at: string;
@@ -223,7 +223,7 @@ export interface Database {
           stripe_subscription_id?: string | null;
           status?: "active" | "canceled" | "past_due" | "trialing" | "incomplete";
           plan?: "free" | "paid";
-          plan_type?: "monthly" | "annual" | "founder_monthly" | "founder_annual" | null;
+          plan_type?: "basic" | "monthly" | "annual" | "founder_monthly" | "founder_annual" | null;
           renewal_date?: string | null;
         };
         Update: {
@@ -231,7 +231,7 @@ export interface Database {
           stripe_subscription_id?: string | null;
           status?: "active" | "canceled" | "past_due" | "trialing" | "incomplete";
           plan?: "free" | "paid";
-          plan_type?: "monthly" | "annual" | "founder_monthly" | "founder_annual" | null;
+          plan_type?: "basic" | "monthly" | "annual" | "founder_monthly" | "founder_annual" | null;
           renewal_date?: string | null;
         };
       };

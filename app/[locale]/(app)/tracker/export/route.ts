@@ -4,6 +4,7 @@ import { renderToBuffer } from "@react-pdf/renderer";
 import { Document, Page, Text, View, StyleSheet } from "@react-pdf/renderer";
 import { createElement } from "react";
 import { getParentTitle } from "@/lib/parentDisplay";
+import { isFullPlan } from "@/lib/subscriptions";
 
 export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
@@ -42,8 +43,8 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
-  const { data: sub } = await supabase.from("subscriptions").select("plan").eq("user_id", user.id).single();
-  if (sub?.plan !== "paid") {
+  const { data: sub } = await supabase.from("subscriptions").select("plan, plan_type").eq("user_id", user.id).single();
+  if (!isFullPlan(sub)) {
     return NextResponse.json({ error: "Upgrade required" }, { status: 403 });
   }
 

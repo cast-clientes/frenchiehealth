@@ -62,6 +62,8 @@ export async function proxy(request: NextRequest) {
     return NextResponse.redirect(new URL(`/${locale}/auth/login`, request.url));
   }
 
+  response.headers.set("x-pathname", rest);
+
   return response;
 }
 

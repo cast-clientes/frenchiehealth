@@ -77,17 +77,17 @@ export default function PaywallModal({
 
   const triggerMessages: Record<typeof triggerReason, string> = {
     entries: es
-      ? `Límite gratuito alcanzado. ${who ? `Como ${who}, d` : "D"}esbloquea el historial completo de ${dog} 🐾`
-      : `Free limit reached. ${who ? `As ${who}, u` : "U"}nlock ${dog}'s complete health history 🐾`,
+      ? `Límite del plan Basic alcanzado. ${who ? `Como ${who}, d` : "D"}esbloquea el historial completo de ${dog} 🐾`
+      : `Basic plan limit reached. ${who ? `As ${who}, u` : "U"}nlock ${dog}'s complete health history 🐾`,
     photo: es
-      ? `Las fotos están bloqueadas en el plan gratuito.${who ? ` ${who?.charAt(0).toUpperCase() + who.slice(1)}, a` : " A"}ctualiza para guardar el historial visual de ${dog}.`
-      : `Photos are locked on the free plan. Upgrade to save ${dog}'s complete visual history.`,
+      ? `Las fotos no están incluidas en el plan Basic.${who ? ` ${who?.charAt(0).toUpperCase() + who.slice(1)}, a` : " A"}ctualiza para guardar el historial visual de ${dog}.`
+      : `Photos aren't included on the Basic plan. Upgrade to save ${dog}'s complete visual history.`,
     chat: es
-      ? `Has usado tus ${freeLimit} mensajes gratuitos.${who ? ` Como ${who}` : ""}, ${dog} merece atención ilimitada 🐾`
-      : `You've used your ${freeLimit} free AI messages. ${dog} deserves unlimited attention 🐾`,
+      ? `Has usado tus ${freeLimit} mensajes del plan Basic.${who ? ` Como ${who}` : ""}, ${dog} merece atención ilimitada 🐾`
+      : `You've used your ${freeLimit} Basic-plan AI messages. ${dog} deserves unlimited attention 🐾`,
     module: es
-      ? `Este módulo de salud${dogName ? ` para ${dog}` : ""} está disponible en el plan de pago.`
-      : `This health module${dogName ? ` for ${dog}` : ""} is available on the paid plan.`,
+      ? `Este módulo de salud${dogName ? ` para ${dog}` : ""} está disponible en el plan completo.`
+      : `This health module${dogName ? ` for ${dog}` : ""} is available on the full plan.`,
   };
 
   const spotsTaken = 100 - founderSpots;

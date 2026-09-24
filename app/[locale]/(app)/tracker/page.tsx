@@ -9,6 +9,7 @@ import {
   RealtimeSkinEntries,
   type SkinEntry,
 } from "@/components/realtime/RealtimeSkinEntries";
+import { isFullPlan } from "@/lib/subscriptions";
 
 type ModuleFilter = "all" | "skin" | "respiratory" | "ears_eyes" | "joints" | "weight";
 
@@ -64,11 +65,11 @@ export default async function TrackerPage({
 
   const { data: sub } = await supabase
     .from("subscriptions")
-    .select("plan")
+    .select("plan, plan_type")
     .eq("user_id", user!.id)
     .single();
 
-  const isPaid = sub?.plan === "paid";
+  const isPaid = isFullPlan(sub);
 
   const zoneLabels: Record<string, string> = {
     facial_folds: t("tracker.zones.facial_folds"),

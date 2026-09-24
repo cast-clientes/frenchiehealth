@@ -3,6 +3,7 @@ import { getTranslations, getLocale } from "next-intl/server";
 import { Card } from "@/components/ui/Card";
 import { Link } from "@/i18n/navigation";
 import { Lock } from "lucide-react";
+import { isFullPlan } from "@/lib/subscriptions";
 
 function renderMarkdown(text: string) {
   // Minimal markdown: bold, lists, headings
@@ -54,18 +55,18 @@ export default async function FeedingPage() {
 
   const { data: sub } = await supabase
     .from("subscriptions")
-    .select("plan")
+    .select("plan, plan_type")
     .eq("user_id", user!.id)
     .single();
 
-  const isPaid = sub?.plan === "paid";
+  const isPaid = isFullPlan(sub);
 
   const { data: plans } = await supabase
     .from("feeding_plans")
     .select("*")
     .order("display_order");
 
-  // Free users get first section only
+  // Basic-plan users get first section only
   const visiblePlans = isPaid ? plans : plans?.slice(0, 1);
   const lockedCount = isPaid ? 0 : (plans?.length ?? 0) - 1;
 

@@ -55,10 +55,12 @@ GOOGLE_ADS_CONVERSION_LABEL=
 3. In GTM, install a Meta Pixel base tag and trigger it after consent.
 4. Map app events to Meta events:
    - `page_view` -> `PageView`
-   - `sign_up_completed` -> `Lead`
    - `begin_checkout` or `paywall_cta_clicked` -> `InitiateCheckout`
    - `purchase` -> `Purchase`
    - `FoundingMemberPurchase` is sent server-side from the Stripe webhook.
+   - `sign_up_completed` is funnel diagnostics only — do NOT map it to `Lead`.
+     There is no free tier: signup alone has no commercial value since every
+     account must complete checkout before using the app.
 5. In Meta Events Manager, enable and verify Conversions API with
    `META_PIXEL_ID` and `META_CONVERSIONS_API_TOKEN`.
 6. Use Meta Test Events to confirm browser and server purchase events arrive.
@@ -71,9 +73,11 @@ GOOGLE_ADS_CONVERSION_LABEL=
 4. Map app events to TikTok events:
    - `page_view` -> `ViewContent`
    - `paywall_cta_clicked` -> `ClickButton`
-   - `sign_up_completed` -> `CompleteRegistration`
    - `begin_checkout` -> `InitiateCheckout`
    - `CompletePayment` is sent server-side from the Stripe webhook.
+   - `sign_up_completed` is funnel diagnostics only — do NOT map it to
+     `CompleteRegistration`. There is no free tier, so signup alone has no
+     commercial value.
 5. Add `TIKTOK_PIXEL_ID` and `TIKTOK_EVENTS_API_TOKEN` for Events API.
 6. Use TikTok test events to confirm browser and server events.
 
@@ -84,8 +88,12 @@ GOOGLE_ADS_CONVERSION_LABEL=
 3. In GTM, create a GA4 Configuration tag that fires after consent.
 4. Create a GA4 Event tag for each Custom Event trigger, passing through the
    matching Data Layer Variables as event parameters.
-5. Mark these GA4 events as conversions:
-   `sign_up_completed`, `purchase`, and `paywall_cta_clicked`.
+5. Mark these GA4 events as conversions: `purchase` and `paywall_cta_clicked`.
+   Do not mark `sign_up_completed` as a conversion — it's funnel diagnostics
+   only, since there is no free tier and signup alone has no commercial value.
+   `purchase` fires client-side from `analytics.purchaseCompleted` on the
+   upgrade success page (after polling confirms the Stripe webhook wrote the
+   paid subscription row) and server-side to Meta/TikTok from the webhook.
 6. Create a remarketing audience for users with `paywall_viewed` but no
    `purchase`.
 

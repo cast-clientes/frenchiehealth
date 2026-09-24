@@ -45,9 +45,12 @@ cp .env.example .env.local
 
 ### 4. Stripe (test mode)
 
-1. Create two products:
-   - Monthly: $7.99/mo recurring → `STRIPE_MONTHLY_PRICE_ID`
-   - Lifetime: $24.99 one-time → `STRIPE_LIFETIME_PRICE_ID`
+1. Create recurring prices under one product:
+   - Basic: $4.99/mo → `STRIPE_PRICE_BASIC`
+   - Monthly: $18.99/mo → `STRIPE_PRICE_MONTHLY`
+   - Annual: $74.99/yr → `STRIPE_PRICE_ANNUAL`
+   - Founder Monthly: $8.99/mo → `STRIPE_PRICE_FOUNDER_MONTHLY`
+   - Founder Annual: $59.99/yr → `STRIPE_PRICE_FOUNDER_ANNUAL`
 2. Webhook endpoint: `https://yourdomain.com/api/webhooks/stripe`
    - Events: `checkout.session.completed`, `customer.subscription.updated`, `customer.subscription.deleted`, `invoice.payment_failed`
 3. Local testing: `stripe listen --forward-to localhost:3000/api/webhooks/stripe`
@@ -84,7 +87,7 @@ app/[locale]/
       new/             # Photo + itch score + zone + food + env
     tips/              # 50 tips by category
     feeding/           # Protein guide, portions, elimination diet
-    chat/              # AI assistant (rate limited for free)
+    chat/              # AI assistant (rate limited on Basic plan)
     dogs/new/          # Add Frenchie profile
     upgrade/           # Stripe checkout
   (public)/
@@ -98,15 +101,17 @@ messages/es.json       # Spanish strings
 
 ---
 
-## Free vs. Paid
+## Basic vs. Full plan
 
-| Feature | Free | Paid |
-|---------|------|------|
-| Skin entries | 5 total | Unlimited |
-| AI chat | 3/day | Unlimited |
+There is no free tier — every account must complete checkout before using the app.
+
+| Feature | Basic | Full |
+|---------|-------|------|
+| Skin entries | 3 total | Unlimited |
+| AI chat | 5 total | Unlimited |
 | PDF export | ❌ | ✅ |
 | Feeding plan | First section | All 4 sections |
-| Price | $0 | $7.99/mo or $24.99 lifetime |
+| Price | $4.99/mo | $18.99/mo (or $8.99/mo Founder, $74.99/yr Annual) |
 
 ---
 

@@ -6,7 +6,7 @@
     "description": "La guía rápida para nuevos dueños de Frenchies: pliegues, calor, alergias, oídos, respiración, vet y tracking desde el día uno.",
     "keywords": "nuevo dueño french bulldog, cachorro bulldog francés cuidados, adoptar frenchie"
   },
-  "nav": { "logo": "Frenchie Care", "how": "Checklist", "pricing": "Founding Member", "signin": "Entrar", "cta": "Empezar gratis" },
+  "nav": { "logo": "Frenchie Care", "how": "Checklist", "pricing": "Founding Member", "signin": "Entrar", "cta": "Comenzar" },
   "hero": {
     "headline": "Tener un Frenchie es diferente a tener cualquier otro perro. Nadie te lo dijo, ¿verdad?",
     "intro": "La primera semana con un Frenchie es caótica. Googlear solo te da información contradictoria. Y tu veterinario tiene 15 minutos para verte."
@@ -39,7 +39,7 @@
     "body": "Hay familias Frenchie compartiendo hitos, preguntas y pequeñas victorias todos los días.",
     "posts": ["Primer baño sin drama", "¿Alguien más limpia pliegues dos veces al día?", "Hoy aprendimos a evitar el paseo con calor"]
   },
-  "cta": { "title": "Empezá el historial de {dogName} desde hoy.", "body": "Cuando tenga 5 años, te lo vas a agradecer.", "button": "Crear historial gratis", "secondary": "Ver oferta fundador" },
+  "cta": { "title": "Empezá el historial de {dogName} desde hoy.", "body": "Cuando tenga 5 años, te lo vas a agradecer.", "button": "Crea tu historial", "secondary": "Ver oferta fundador" },
   "footer": { "tagline": "Un inicio más claro para una raza que necesita cuidados distintos.", "disclaimer": "Frenchie Care educa y registra. No reemplaza atención veterinaria.", "terms": "Términos", "privacy": "Privacidad" },
   "images": {
     "hero": "https://pikaso.cdnpk.net/private/production/4749332710/render.png?token=exp=1783036800~hmac=2c8eb33b088c459e953a6218318cc4a9972c28763ed754caa9a8694bdc30ecbd",
